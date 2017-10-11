@@ -137,7 +137,7 @@ class SelectPanel extends Component {
             role="listbox"
             onKeyDown={this.handleKeyDown}
         >
-            <div style={styles.searchContainer}>
+            {props.hasSearch && <div style={styles.searchContainer}>
                 <input
                     placeholder="Search"
                     type="text"
@@ -146,7 +146,7 @@ class SelectPanel extends Component {
                     onFocus={() => this.handleSearchFocus(true)}
                     onBlur={() => this.handleSearchFocus(false)}
                 />
-            </div>
+            </div>}
 
             <SelectItem
                 focused={focusIndex === 0}
